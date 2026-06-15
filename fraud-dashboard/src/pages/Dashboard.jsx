@@ -51,7 +51,7 @@ function Dashboard() {
                     : "LOW";
 
             const response = await fetch(
-                "http://localhost:8080/transactions",
+                "shimmering-courtesy-production-010a.up.railway.app/transactions",
                 {
                     method: "POST",
                     headers: {
@@ -91,7 +91,7 @@ function Dashboard() {
     };
 
     useEffect(() => {
-        fetch("http://localhost:8080/dashboard")
+        fetch("shimmering-courtesy-production-010a.up.railway.app/dashboard")
             .then((res) => res.json())
             .then((data) => setStats(data))
             .catch((err) => console.error(err));
