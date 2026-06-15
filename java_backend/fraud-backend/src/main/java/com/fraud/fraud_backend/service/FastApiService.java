@@ -12,7 +12,7 @@ public class FastApiService {
 
         RestTemplate restTemplate = new RestTemplate();
 
-        String url = "http://127.0.0.1:8000/score";
+        String url = "https://fraud-ml-api-uscs.onrender.com/score";
 
         return restTemplate.postForObject(
                 url,
