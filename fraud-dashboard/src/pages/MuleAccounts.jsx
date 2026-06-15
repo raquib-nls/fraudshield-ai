@@ -4,7 +4,7 @@ function MuleAccounts() {
   const [accounts, setAccounts] = useState({});
 
   useEffect(() => {
-    fetch("https://shimmering-courtesy-production-010a.up.railway.app/mule-accounts")
+    fetch("https://shimmering-courtesy-production-010a.up.railway.app/dashboard")
       .then((res) => res.json())
       .then((data) => setAccounts(data))
       .catch((err) => console.error(err));
