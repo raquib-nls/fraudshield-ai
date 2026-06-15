@@ -91,7 +91,7 @@ function Dashboard() {
     };
 
     useEffect(() => {
-        fetch("shimmering-courtesy-production-010a.up.railway.app/dashboard")
+        fetch("https://shimmering-courtesy-production-010a.up.railway.app/dashboard")
             .then((res) => res.json())
             .then((data) => setStats(data))
             .catch((err) => console.error(err));

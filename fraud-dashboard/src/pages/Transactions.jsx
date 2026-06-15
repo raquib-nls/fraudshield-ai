@@ -5,7 +5,7 @@ function Transactions() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("shimmering-courtesy-production-010a.up.railway.app/transactions")
+    fetch("https://shimmering-courtesy-production-010a.up.railway.app/transactions")
       .then((res) => res.json())
       .then((data) => setTransactions(data))
       .catch((err) => console.error(err));
