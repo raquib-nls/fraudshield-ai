@@ -4,7 +4,7 @@ function Alerts() {
   const [alerts, setAlerts] = useState([]);
 
   useEffect(() => {
-    fetch("https://shimmering-courtesy-production-010a.up.railway.app/dashboard")
+    fetch("https://shimmering-courtesy-production-010a.up.railway.app/alerts")
       .then((res) => res.json())
       .then((data) => setAlerts(data))
       .catch((err) => console.error(err));
