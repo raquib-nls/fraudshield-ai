@@ -1,9 +1,14 @@
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+
+  const navigate = useNavigate();
 
   const logout = () => {
     localStorage.removeItem("auth");
-    window.location.href = "/login";
+    navigate("/login");
   };
+
 
   return (
     <div

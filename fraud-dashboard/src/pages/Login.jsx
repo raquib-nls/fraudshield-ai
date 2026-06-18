@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -10,7 +13,7 @@ function Login() {
       password === "admin123"
     ) {
       localStorage.setItem("auth", "true");
-      window.location.href = "/";
+      navigate("/");
     } else {
       alert("Invalid Credentials");
     }
@@ -51,8 +54,7 @@ function Login() {
             marginBottom: "40px",
           }}
         >
-          Real-Time Fraud Detection &
-          Mule Account Monitoring
+          Real-Time Fraud Detection & Mule Account Monitoring
         </p>
 
         <div
@@ -116,8 +118,7 @@ function Login() {
             padding: "40px",
             borderRadius: "20px",
             border: "1px solid #334155",
-            boxShadow:
-              "0 20px 50px rgba(0,0,0,0.4)",
+            boxShadow: "0 20px 50px rgba(0,0,0,0.4)",
           }}
         >
           <h2
@@ -132,9 +133,7 @@ function Login() {
           <input
             placeholder="Username"
             value={username}
-            onChange={(e) =>
-              setUsername(e.target.value)
-            }
+            onChange={(e) => setUsername(e.target.value)}
             style={{
               width: "100%",
               padding: "14px",
@@ -150,9 +149,7 @@ function Login() {
             type="password"
             placeholder="Password"
             value={password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
+            onChange={(e) => setPassword(e.target.value)}
             style={{
               width: "100%",
               padding: "14px",
